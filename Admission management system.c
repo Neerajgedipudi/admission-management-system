@@ -93,12 +93,10 @@ void bus()//transportation service selection
         printf("You have selected ROUTE:3\n");
     }
 }
-/*void bill()
+void total_bill()
 {
-    printf("The fee generated");
-    printf("")
 
-}*/
+}
 int main()
 {
     int facility;
