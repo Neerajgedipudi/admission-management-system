@@ -1,17 +1,19 @@
+// WELCOME TO BASIC ADMISSION SYSTEM
+
 #include<stdio.h>
-void welcome()// welcome messege
+void welcome()// printing of welcome message
 {
     printf("\tWELCOME TO KINGSTON ENGINEERING COLLEGE\t\n");
     printf("Please fill the following details for the admission\n");
 }
-void student()//basic details of student
+void student()//entry of basic details of student
 {
     char studentname[50];
     printf("enter the student name:\n");
     scanf("%s",&studentname);
     printf("Input given is :%s\n",studentname);
 }
-void branch()//selection of engineering courses
+void branch()//selection of engineering courses by the user
 {
     char branch[10];
     printf("Engineering courses available:\n");
@@ -29,16 +31,16 @@ void feeconseesion()//fee discount based on 12th percentage
     scanf("%f",&percentage);
     if(percentage>=90 && percentage <= 100)
     {
-        printf("you are eligible to get 25 percent fee consesssion");
+        printf("you are eligible to get 25 percent fee consession\n");
     }
     else if(percentage>=80 && percentage <90)
     {
-        printf("you are eligible to get 15 percent fee consession");
+        printf("you are eligible to get 15 percent fee consession\n");
 
     }
     else if(percentage>=75 && percentage <80)
     {
-        printf("you are eligible to get 10 percent fee consession");
+        printf("you are eligible to get 10 percent fee consession\n");
     }
     else
     {
@@ -50,24 +52,18 @@ void hostel()//hostel selection
 {
     //printf("")
     printf("Select the option below for HOSTEL if needed\n");
-    printf(" Select 1.Two share\n select 2.Four share\n select 3.EXIT \n");
+    printf(" Select 1.Two share\n select 2.Four share\n ");
     int option;
     scanf("%d",&option);
     if(option==1)
     {
         printf("You have selected two share room\n");
     }
-    else if(option==2)
+    else
     {
         printf("you have selected four share option\n");
     }
-    else if(option==3)
-    {
-        printf("EXIT\n");
-    }
-    else{
-        printf("Error\n");
-    }
+
 
 
 
@@ -92,13 +88,9 @@ void bus()//transportation service selection
     {
         printf("You have selected ROUTE:2\n");
     }
-    else if(route==3)
-    {
-        printf("You have selected ROUTE:3\n");
-    }
     else
     {
-        printf("EXIT");
+        printf("You have selected ROUTE:3\n");
     }
 }
 /*void bill()
@@ -109,11 +101,28 @@ void bus()//transportation service selection
 }*/
 int main()
 {
+    int facility;
     welcome();
     student();
     branch();
     feeconseesion();
-    hostel();
-    bus();
+    printf("\tSelect the facility:\t\n");
+    printf("\t option 1: HOSTEL Facility\n\t option 2:BUS Facility\n");
+    printf("\t Click any Key and enter to not select the facility provided\t\n");
+    printf("Enter your option:");
+    scanf("%d",&facility);
+    if(facility==1)
+    {
+         hostel();
+    }
+    else if(facility==2)
+    {
+        bus();
+    }
+    else
+    {
+        printf("EXITED");
+    }
+
     return 0;
 }
