@@ -9,16 +9,18 @@ void welcome()// printing of welcome message
 void student_details()//entry of basic details of student
 {
 
-
-
-
     char studentname[50];
     int age;
     printf("enter your name:\n");
     fgets(studentname,50,stdin);
+    char mobile_number[10];
+    printf("Enter mobile number:+91");
+    fgets(mobile_number,11,stdin);
     printf("Enter your age:\n");
     scanf("%d",&age);
-    printf("Entered data:\n Name:%s Age:%d\n",studentname,age);
+    printf("Entered data:\nName:%s\n",studentname);
+    printf("Mobile Number:+91%s\n",mobile_number);
+    printf("Age:%d\n",age);
 
 
 
@@ -29,7 +31,7 @@ void branch()//selection of engineering courses by the user
     printf("Engineering courses available:\n");
     printf(" ECE\n CSE\n AIML\n EEE\n MECH\n CIVIL\n");
     printf("Select the branch:");
-    scanf("%s",&branch);
+    scanf("%s",branch);
     printf("The selected course: %s\n",branch);
 
 
@@ -117,7 +119,7 @@ void total_bill()
 }*/
 int main()
 {
-    int facility;
+    int option;
     welcome();
     student_details();
     printf("------------------------------------\n");
@@ -127,12 +129,12 @@ int main()
     printf("\t option 1: RESIDENTIAL FACILITY \n\t option 2:BUS Facility\n");
     printf("\t Click any Key to exit and bill generation\t\n");
     printf("Enter your option:");
-    scanf("%d",&facility);
-    if(facility==1)
+    scanf("%d",&option);
+    if(option==1)
     {
          hostel();
     }
-    else if(facility==2)
+    else if(option==2)
     {
         bus();
     }
