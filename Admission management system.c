@@ -1,17 +1,27 @@
-// WELCOME TO BASIC ADMISSION SYSTEM
+// WELCOME TO BASIC ADMISSION MANAGEMENT  SYSTEM
 
 #include<stdio.h>
 void welcome()// printing of welcome message
 {
     printf("\tWELCOME TO KINGSTON ENGINEERING COLLEGE\t\n");
-    printf("Please fill the following details for the admission\n");
+    printf("\tPlease fill the following details for the admission\t\n");
 }
-void student()//entry of basic details of student
+void student_details()//entry of basic details of student
 {
+
+
+
+
     char studentname[50];
-    printf("enter the student name:\n");
-    scanf("%s",&studentname);
-    printf("Input given is :%s\n",studentname);
+    int age;
+    printf("enter your name:\n");
+    fgets(studentname,50,stdin);
+    printf("Enter your age:\n");
+    scanf("%d",&age);
+    printf("Entered data:\n Name:%s Age:%d\n",studentname,age);
+
+
+
 }
 void branch()//selection of engineering courses by the user
 {
@@ -51,7 +61,7 @@ void feeconseesion()//fee discount based on 12th percentage
 void hostel()//hostel selection
 {
     //printf("")
-    printf("Select the option below for HOSTEL if needed\n");
+    printf("Select the option below for Residential facility \n");
     printf(" Select 1.Two share\n select 2.Four share\n ");
     int option;
     scanf("%d",&option);
@@ -82,31 +92,40 @@ void bus()//transportation service selection
     if(route==1)
     {
         printf("You have selected ROUTE:1\n");
+        printf("Fee for this route: Rs 12,000/-");
 
     }
     else if(route==2)
     {
         printf("You have selected ROUTE:2\n");
+        printf("Fee for this route: Rs 20,000/-");
+    }
+    else if(route==3)
+    {
+        printf("You have selected ROUTE:3\n");
+        printf("Fee for this route: Rs 18,000/-");
     }
     else
     {
-        printf("You have selected ROUTE:3\n");
+        printf("EXITED\n");
     }
-}
+}/*
 void total_bill()
 {
 
-}
+
+}*/
 int main()
 {
     int facility;
     welcome();
-    student();
+    student_details();
+    printf("------------------------------------\n");
     branch();
     feeconseesion();
     printf("\tSelect the facility:\t\n");
-    printf("\t option 1: HOSTEL Facility\n\t option 2:BUS Facility\n");
-    printf("\t Click any Key and enter to not select the facility provided\t\n");
+    printf("\t option 1: RESIDENTIAL FACILITY \n\t option 2:BUS Facility\n");
+    printf("\t Click any Key to exit and bill generation\t\n");
     printf("Enter your option:");
     scanf("%d",&facility);
     if(facility==1)
@@ -119,7 +138,7 @@ int main()
     }
     else
     {
-        printf("EXITED");
+        printf("BILL GEREATION :\n");
     }
 
     return 0;
