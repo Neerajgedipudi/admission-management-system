@@ -1,2 +1,2 @@
-Admission Management system
+# Admission Management system
 
