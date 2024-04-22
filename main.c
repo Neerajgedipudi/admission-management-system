@@ -25,20 +25,20 @@ int main()
     printf("\t Click any Key to exit and bill generation\t\n");
     printf("Enter your option:");
     scanf("%d",&option);
-    if(option==1)
+    if(option==1)//selection of residential and transport facility
     {
-         hostel();
+         hostel();//residential facility function
     }
     else if(option==2)
     {
-        bus();
+        bus();//transport facility function
     }
     else
     {
 
     }
     printf("----------------------------\n");
-    total_bill();
+    total_bill();//billing function
 
     return 0;
 }

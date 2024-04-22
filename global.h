@@ -3,7 +3,7 @@
 
 
 #include<stdio.h>
-
+    FILE *bill;
     float coursefee=0.0;
     float hostelfee=0.0;
     float travelfee=0.0;
