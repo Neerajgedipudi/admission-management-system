@@ -17,7 +17,7 @@ int main()
     printf("\tWELCOME TO XYZ ENGINEERING COLLEGE\t\n");
     printf("Please fill the following details for the admission\n");
     student_details();
-    printf("------------------------------------\n");
+    printf("------------------------------------------\n");
     branch();
     feeconseesion();
     printf("\tSelect the Facility:\t\n");
@@ -35,9 +35,9 @@ int main()
     }
     else
     {
-
+         printf("No valid option selected. Proceeding to bill generation...\n");
     }
-    printf("----------------------------\n");
+    printf("--------------------------------------------\n");
     total_bill();//billing function
 
     return 0;

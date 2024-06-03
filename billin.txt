@@ -1,5 +1,0 @@
-Course Fee:              90000.00
-Fee After Consession:    90000.00
-Residential Facility Fee:95000.00
-Transport Facility Fee:  0.00
-Total Fee:               185000.00
