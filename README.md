@@ -1,2 +1,2 @@
 # Admission Management system
-
+The Admission Management System offer's a user-friendly interface and fully autonomous , Applicants can navigate the process independently, entering details, selecting courses, and providing academic information. The system automatically calculates fee discounts based on academic merit. Users can further customize their enrollment by choosing optional residential and transportation services. A dedicated function generates a comprehensive bill detailing the selected course, discounts, final fees, and chosen facilities.
