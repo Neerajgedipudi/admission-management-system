@@ -4,6 +4,19 @@
 
 #include<stdio.h>
     FILE *bill;
+    struct details
+    {
+        char name[40];
+        char father_name[40];
+        long long father_number;
+        long long mobile_number;
+
+
+    };
+     struct details student;
+     int day, month, year;
+    float percentage;
+    float tenth_percentage;
     float coursefee=0.0;
     float hostelfee=0.0;
     float travelfee=0.0;

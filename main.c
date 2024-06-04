@@ -1,3 +1,4 @@
+
 #include<stdio.h>
 #include"admission_management_system.h"
 #include"global.h"
@@ -22,7 +23,7 @@ int main()
     feeconseesion();
     printf("\tSelect the Facility:\t\n");
     printf("\t option 1: RESIDENTIAL FACILITY \n\t option 2: TRANSPORT FACILITY\n");
-    printf("\t Click any Key to exit and bill generation\t\n");
+    printf("\t Click any Key to bill generation if above facility is not required\t\n");
     printf("Enter your option:");
     scanf("%d",&option);
     if(option==1)//selection of residential and transport facility
@@ -35,7 +36,7 @@ int main()
     }
     else
     {
-         printf("No valid option selected. Proceeding to bill generation...\n");
+         printf("Proceeding to bill generation...\n");
     }
     printf("--------------------------------------------\n");
     total_bill();//billing function

@@ -5,15 +5,23 @@
 
 void feeconseesion() // fee discount based on 12th percentage
 {
-    float percentage;
-    int valid = 0; //  to indicate if a valid input has been entered
+     int valid = 0; //  to indicate if a valid input has been entered
 
-    while (!valid) {// if percentage greater than 100 and less than 0 are invalid input this while loop helps the user to re enter the input
+  while (!valid) {// if percentage greater than 100 and less than 0 are invalid input this while loop helps the user to re enter the input
+        printf("Enter your 10th percentage:\n");
+        if (scanf("%f", &tenth_percentage) != 1 || tenth_percentage < 0 || tenth_percentage > 100) {
+            printf("Invalid input. Please enter a valid percentage between 0 and 100.\n");
+        } else {
+            valid = 1; // Valid input has been entered
+        }
+    }
+       int puc_valid=0;
+    while (!puc_valid) {// if percentage greater than 100 and less than 0 are invalid input this while loop helps the user to re enter the input
         printf("Enter your PUC percentage:\n");
         if (scanf("%f", &percentage) != 1 || percentage < 0 || percentage > 100) {
             printf("Invalid input. Please enter a valid percentage between 0 and 100.\n");
         } else {
-            valid = 1; // Valid input has been entered
+            puc_valid = 1; // Valid input has been entered
         }
     }
 
