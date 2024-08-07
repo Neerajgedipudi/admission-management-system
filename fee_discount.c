@@ -2,7 +2,7 @@
 #include "global.h"
 #include <stdio.h>
 
-void feeconseesion() // fee discount based on 12th percentage
+int feeconseesion() // fee discount based on 12th percentage
 {
     int valid = 0; // to indicate if a valid input has been entered
 
@@ -13,7 +13,7 @@ void feeconseesion() // fee discount based on 12th percentage
             while (getchar() != '\n'); // Clear input buffer
         } else if (tenth_percentage <= 58) {
             printf("You are not eligible to join. Please reapply for admission.\n");
-            return; // Exit function
+            return 0; // Indicate that the student is not eligible
         } else {
             valid = 1; // Valid input has been entered
         }
@@ -27,7 +27,7 @@ void feeconseesion() // fee discount based on 12th percentage
             while (getchar() != '\n'); // Clear input buffer
         } else if (percentage <= 58) {
             printf("You are not eligible to join.\n");
-            return; // Exit function
+            return 0; // Indicate that the student is not eligible
         } else {
             puc_valid = 1; // Valid input has been entered
         }
@@ -57,4 +57,5 @@ void feeconseesion() // fee discount based on 12th percentage
     }
 
     discountprice = coursefee - discountamount;
-   }
+    return 1; // Indicate that the student is eligible
+}

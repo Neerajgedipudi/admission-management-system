@@ -6,8 +6,8 @@
 #include "fee_discount.c"
 #include "hostel_selection.c"
 #include "bus_selection.c"
-#include "totalbill.c"// bill 
-#include "buffer.c"// clearing the new line 
+#include "totalbill.c" // bill 
+#include "buffer.c" // clearing the new line 
 
 int main()
 {
@@ -23,15 +23,13 @@ int main()
         
         branch(); // Select branch
         
-        // Call fee concession function
-       feeconseesion();
-        
-        // Check if the student is eligible and proceed
-        if (discountamount == 0 && (tenth_percentage <= 58 || percentage <= 58)) {
-            printf("\n");
+        // Call fee concession function and check eligibility
+        if (!feeconseesion()) {
+            printf("Admission process terminated for this student. Proceeding to the next admission.\n");
             clear_input_buffer();
             continue; // Skip to the next iteration for the next admission
         }
+        
         // selection of facility
         printf("\tSelect the Facility:\t\n");
         printf("\t option 1: RESIDENTIAL FACILITY \n\t option 2: TRANSPORT FACILITY\n");
@@ -62,5 +60,5 @@ int main()
         printf("\n");
     }
 
-    return 0;// This will never end
+    return 0; // This will never end
 }
